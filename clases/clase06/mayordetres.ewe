@@ -1,0 +1,36 @@
+# Programa que lee tres números e imprime el mayor
+inicio:
+            readInt(a)
+	    readInt(b)
+	    readInt(c)
+	    if a <= b then goto verdcond1
+	    if a <= c then goto verdcond3
+	    writeInt(a)
+	    goto fincond3
+
+verdcond3:
+            writeInt(c)
+	    goto fincond3
+
+fincond3:
+            goto fincond1
+
+verdcond1:
+            if b <= c then goto verdcond2
+	    writeInt(b)
+	    goto fincond2
+
+verdcond2:
+            writeInt(c)
+	    goto fincond2
+
+fincond2:
+            goto fincond1
+
+fincond1:
+            goto fin
+	    
+fin:        halt
+equ a M[0]
+equ b M[1]
+equ c M[2]

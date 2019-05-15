@@ -1,0 +1,41 @@
+# Programa que elimina los espacios en blanco que están al principio de una cadena.
+
+inicio:
+                len := 256
+                readStr(str, len)
+                espacio := 32
+                i := 0
+		j := 0
+                dir := 0
+		strN := " "
+		dirN := 264
+                cero := 0
+                uno := 1
+
+recorrer:
+                var := M[dir + 0]
+		dir := dir + uno
+                if var = espacio then goto recorrer
+                if var = cero then goto fin
+                goto cortar
+		
+cortar:
+	        M[dirN + 0] := var
+	        dirN := dirN + uno
+	        goto recorrer
+		
+fin:
+	        writeStr(strN)
+		halt
+
+equ str M[0]
+equ len	M[256]
+equ espacio M[257]
+equ i M[258]
+equ j M[259]
+equ dir	M[260]
+equ cero M[261]
+equ uno M[262]
+equ var M[263]
+equ strN M[264]
+equ dirN M[520]

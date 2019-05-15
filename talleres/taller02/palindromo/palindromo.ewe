@@ -1,0 +1,64 @@
+#Programa que lee cadenas sin espacios, escribe "1" si la cadena es un palíndromo y "0" si no lo es.
+
+inicio:
+                len := 256
+                readStr(str, len)
+                contador := 0
+                dir := 0
+		dircomparar := 0
+                cero := 0
+                uno := 1
+                goto recorrer
+
+recorrer:
+                var := M[dir + 0]
+                if var = cero then goto iniciar
+                contador := contador + uno
+                dir := dir + uno
+                goto recorrer
+
+iniciar: 
+                contador := contador - uno
+                goto comparar
+
+comparar:
+                letra := M[dircomparar + 0]
+                letraf := M[contador + 0]
+                if letra = letraf then goto continuar
+		if letra = cero then goto verificar
+                goto false
+
+continuar:
+                dircomparar := dircomparar + uno
+                contador := contador - uno
+		if dircomparar = contador then goto true
+		corroborarpares := contador - uno
+		if dircomparar = corroborarpares then goto true
+                goto comparar
+
+verificar:
+                if letraf = cero then goto true
+		goto false
+
+false:
+                writeInt(cero)
+                goto fin
+
+true:
+                writeInt(uno)
+                goto fin
+
+fin:
+                halt
+
+equ str M[0]
+equ len M[256]
+equ contador M[257]
+equ dir M[258]
+equ dircomparar M[259]
+equ cero M[260]
+equ uno M[261]
+equ var M[262]
+equ letra M[263]
+equ letraf M[264]
+equ corroborarpares M[265]

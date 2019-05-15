@@ -1,0 +1,16 @@
+# Esto es un comentario
+
+inicio:   dos := 2
+          uno := 1
+	  a   := 0
+	  b   := 5
+	  c   := b + uno
+	  a   := b * c
+	  a   := a * dos
+	  writeInt(a)
+fin:      halt
+equ a M[0]
+equ b M[1]
+equ c M[2]
+equ uno M[3]
+equ dos M[4]

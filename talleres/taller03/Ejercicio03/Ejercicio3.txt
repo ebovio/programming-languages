@@ -1,0 +1,5 @@
+1. El tamaño de todos los tipo de datos es el mismo: 8bytes.
+2. Esto es porque son punteros que apuntan a un espacio de memoria ya definido, entonces
+regresan el tamaño de memoria al que apuntan y no el tamaño del tipo de dato.
+3. No se pide un mínimo y máximo porque, cómo se mencionó antes, en este caso no se 
+establecen tamaños de tipo de dato, sino de espacios de memoria, que el programador puede asignar a su conveniencia, sin límite (excepto por el de la memoria misma).

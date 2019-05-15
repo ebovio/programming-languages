@@ -1,0 +1,25 @@
+#Programa al que se le corrigió la sintáxis.
+
+inicio:
+            cero := 0
+            readInt(a)
+            readInt(b)
+            if a > cero then goto condtrue
+            writeInt(b)
+            goto final
+
+condtrue:
+            if b < cero then goto condfalse
+            writeInt(a)
+            goto final
+
+condfalse:
+            writeInt(b)
+	    goto final
+
+final:
+            halt
+
+equ cero M[0]
+equ a M[1]
+equ b M[2]

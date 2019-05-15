@@ -1,0 +1,36 @@
+#Programa que lee un valor N de enteros y calcula su promedio.
+
+inicio:
+              cero := 0
+	      uno  := 1
+	      iterador := 0
+	      suma := 0
+	      promedio := 0
+	      readInt(n)
+	      if n > cero then goto ciclo
+	      writeInt(cero)
+
+ciclo:
+              if iterador = n then goto division
+	      readInt(x)
+	      suma := suma + x
+	      iterador := iterador + uno
+	      goto ciclo
+
+division:
+              promedio := suma/n
+	      writeInt(promedio)
+	      goto fin
+
+fin:
+              halt
+
+equ cero M[0]
+equ uno M[1]
+equ iterador M[2]
+equ suma M[3]
+equ promedio M[4]
+equ n M[5]
+equ x M[6]
+
+	      

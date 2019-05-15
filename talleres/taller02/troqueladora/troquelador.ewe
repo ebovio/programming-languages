@@ -1,0 +1,75 @@
+#Troqueladora.
+
+inicio:
+                  len := 100
+                  readStr(str, len)
+                  posicion := 0
+                  posicion2 := 1
+                  cero := 0
+                  dos := 2
+                  pares := 0
+                  buenos := 0
+                  malos := 0
+                  minA := 97
+                  minZ := 122
+                  mayA := 65
+                  mayZ := 90
+		  uno := 1
+
+recorrer:
+                  letraA := M[posicion + 0]
+                  letraB := M[posicion2 + 0]
+                  posicion := posicion + dos
+                  posicion2 := posicion2 + dos
+                  if letraB = cero then goto fin
+                  goto minuscula
+
+minuscula:
+                  if letraA >= minA then goto minuscula2
+                  goto sumMalos
+
+minuscula2:
+                  if letraA <= minZ then goto mayuscula
+                  goto sumMalos
+
+mayuscula:
+                  if letraB >= mayA then goto mayuscula2
+
+mayuscula2:
+                  if letraB <= mayZ then goto sumBuenos
+                  goto sumMalos
+
+sumBuenos:
+                  buenos := buenos + uno
+                  goto sumPares
+
+sumMalos:
+                  malos := malos + uno
+                  goto sumPares
+
+sumPares:
+                  pares:= pares + uno
+                  goto recorrer
+
+fin:
+                  writeInt(pares)
+                  writeInt(buenos)
+                  writeInt(malos)
+                  halt
+
+equ str M[0]
+equ len M[100]
+equ posicion M[101]
+equ posicion2 M[102]
+equ cero M[103]
+equ dos M[104]
+equ pares M[105]
+equ buenos M[106]
+equ malos M[107]
+equ letraA M[108]
+equ letraB M[109]
+equ minA M[110]
+equ minZ M[111]
+equ mayA M[112]
+equ mayZ M[113]
+equ uno M[114]

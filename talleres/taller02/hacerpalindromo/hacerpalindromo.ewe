@@ -1,0 +1,45 @@
+#Programa que lee una cadena de caracteres sin espacios y la convierte en palíndromo.
+
+inicio:
+                len := 256
+                readStr(str, len)
+                contador := 0
+                dir := 0
+		dirinsertar := 0
+                cero := 0
+                uno := 1
+                goto recorrer
+
+recorrer:
+                var := M[dir + 0]
+                if var = cero then goto iniciar
+                contador := contador + uno
+                dir := dir + uno
+                goto recorrer
+
+iniciar:
+                dirinsertar := dir - uno
+		goto crear
+
+crear:
+                dir := dir - uno
+                letra := M[dirinsertar + 0]
+                M[contador + 0] := letra
+		contador := contador + uno
+		dirinsertar := dirinsertar -uno
+                if dir = cero then goto fin
+                goto crear
+
+fin:
+                writeStr(str)
+                halt
+
+equ str M[0]
+equ len M[256]
+equ contador M[257]
+equ dir M[258]
+equ dirinsertar M[259]
+equ cero M[260]
+equ uno M[261]
+equ var M[262]
+equ letra M[263]

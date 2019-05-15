@@ -1,0 +1,38 @@
+#Programa que lee un caracter y posteriormente recibe una cadena de caracteres de tamaño indeterminado. El programa se encarga de mostrar los índices donde se encuentra dicha letra
+
+inicio:
+	        indice := 0
+	        len := 256
+		lenChar := 1
+		readStr(n, lenChar)
+                readStr(str, len)
+                dir := 0
+                cero := 0
+                uno := 1
+
+recorrer:
+                var := M[dir + 0]
+                if var = n then goto imprimir
+                if var = cero then goto fin
+                dir := dir + uno
+		indice := indice + uno
+                goto recorrer
+
+imprimir:
+                writeInt(indice)
+		indice := indice + uno
+                dir := dir + uno
+                goto recorrer
+
+fin:
+                halt
+
+equ str M[0]
+equ len M[256]
+equ indice M[257]
+equ dir M[258]
+equ cero M[259]
+equ uno M[260]
+equ var M[261]
+equ n M[262]
+equ lenChar M[263]

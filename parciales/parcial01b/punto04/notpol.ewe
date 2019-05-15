@@ -1,0 +1,48 @@
+inicio: 
+           len := 0
+           readStr(op, len)
+	   readInt(x)
+	   readInt(y)
+	   resultado := 0
+	   strmenos := "-"
+	   strsuma  := "+"
+	   strmult  := "*"
+	   strdiv   := "/"
+	   if op = strmenos then goto resta
+	   if op = strsuma then goto suma
+	   if op = strmult then goto mult
+	   if op = strdiv then goto div
+	   goto fin
+
+resta:
+           resultado := x - y
+	   writeInt(resultado)
+	   goto fin
+
+suma:
+           resultado := x + y
+	   writeInt(resultado)
+	   goto fin
+
+mult:
+           resultado := x * y
+	   writeInt(resultado)
+	   goto fin
+
+div:
+           resultado := x/y
+	   writeInt(resultado)
+	   goto fin
+
+fin:
+           halt
+
+equ len M[0]
+equ op M[1]
+equ x M[2]
+equ y M[3]
+equ resultado M[5]
+equ strmenos M[6]
+equ strsuma M[7]
+equ strmult M[8]
+equ strdiv M[9]

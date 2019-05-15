@@ -1,0 +1,9 @@
+inicio:
+           str := "Hola mundo"
+	   writeStr(str)
+
+fin:       halt
+equ str M[0]
+
+#equ str M[1]
+

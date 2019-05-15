@@ -1,0 +1,38 @@
+#Programa que lee una cantidad indeterminada de números enteros y cuando entra un valor negativo calcula el promedio de los números anteriores.
+
+inicio:
+              cero := 0
+	            uno  := 1
+	            suma := 0
+	            promedio := 0
+              contador := 0
+              error := "Ingresó un valor negativo"
+
+	            readInt(n)
+              suma := suma + n
+	            if n >= cero then goto ciclo
+	            writeStr(error)
+
+ciclo:
+              contador := contador + uno
+	      readInt(x)
+              if x < cero then goto division
+	            suma := suma + x
+	            goto ciclo
+
+division:
+              promedio := suma/contador
+	            writeInt(promedio)
+	            goto fin
+
+fin:
+              halt
+
+equ cero M[0]
+equ uno M[1]
+equ suma M[2]
+equ promedio M[3]
+equ contador M[4]
+equ n M[5]
+equ x M[6]
+equ error M[7]

@@ -1,0 +1,7 @@
+<S>  => <A><B>
+     => <A>
+     => x<A>
+     => xy<A>
+     => xyx<A>
+     => xyxy<A>
+     => xyxy

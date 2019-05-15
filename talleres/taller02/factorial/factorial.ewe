@@ -1,0 +1,37 @@
+#Programa que calcula el factorial de un número N.
+
+inicio:
+                factorial := 1
+		contador := 1
+		uno := 1
+		cero := 0
+		str := "Error"
+		readInt(n)
+		if n > uno then goto ciclo
+		if n < cero then goto error
+		writeInt(factorial)
+		goto fin
+
+ciclo:
+                contador := contador + uno
+                if contador > n then goto resultado
+		factorial := factorial * contador
+		goto ciclo
+
+resultado:
+                writeInt(factorial)
+		goto fin
+
+error:
+                writeStr(str)
+		goto fin
+		
+fin:
+                halt
+
+equ factorial M[0]
+equ contador M[1]
+equ uno M[2]
+equ cero M[3]
+equ n M[4]
+equ str M[5]

@@ -1,0 +1,52 @@
+# Conversión a mayúsculas
+
+INICIO:
+               len    := 256
+	       lita   := 97         # 'a'
+	       litz   := 122        # 'z'
+	       cero   := 0
+	       uno    := 1
+	       offset := 32         # 'a' - 'A'
+	       bases  := 0
+	       i      := 0
+	       # s = input()
+	       readStr(s,len)
+	       # i = 0
+	       i      := cero
+	       # while s[i] != 0
+
+CICLO:
+               # s[i]
+	       dir         := bases +i
+	       valordir    := M[dir + 0]
+	       if valordir = cero then goto FINCICLO
+	       # if ('a' <= s[i] && s[i] <='z')
+	       if lita > valordir then goto FINCOND
+	       if valordir > litz then goto FINCOND
+	       # S[i] - 'a' + 'A'
+	       valordir    := valordir - offset
+	       # s[i] = s[i] - 'a' + 'A'
+	       M[dir + 0]  := valordir
+
+FINCOND:
+               # i++
+	       i := i + uno
+	       goto CICLO
+
+FINCICLO:
+               writeStr(s)
+
+FIN:
+               halt
+
+equ s           M[0]
+equ cero        M[256]
+equ uno         M[257]
+equ lita        M[258]
+equ litz        M[259]
+equ i           M[260]
+equ offset      M[261]
+equ bases       M[262]
+equ dir         M[263]
+equ valordir    M[264]
+equ len         M[265]

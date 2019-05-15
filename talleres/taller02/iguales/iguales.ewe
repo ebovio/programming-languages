@@ -1,0 +1,50 @@
+#Programa que lee dos cadenas de caracteres y comprueba si son iguales.
+
+inicio:
+                lenA := 100
+		lenB := 100
+                readStr(strA, lenA)
+		readStr(strB, lenB)
+                dirA := 0
+		dirB := 100
+                cero := 0
+                uno := 1
+		fail := "No son iguales"
+		success := "Son iguales"
+
+recorrer:
+		varA := M[dirA + 0]
+                varB := M[dirB + 0]
+		dirA := dirA + uno
+		dirB := dirB + uno
+		if varA = cero then goto confirmar
+                if varB = cero then goto condfalse
+		if varA = varB then goto recorrer
+		
+confirmar:
+                if varB = cero then goto condtrue
+		goto condfalse
+                
+condfalse:
+                writeStr(fail)
+		goto fin
+
+condtrue:
+                writeStr(success)
+                goto fin
+
+fin:
+                halt
+
+equ strA M[0]
+equ strB M[100]
+equ lenA M[200]
+equ lenB M[201]
+equ dirA M[202]
+equ dirB M[203]
+equ uno M[204]
+equ cero M[205]
+equ varA M[206]
+equ varB M[207]
+equ fail M[208]
+equ success M[209]

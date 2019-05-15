@@ -1,0 +1,28 @@
+# Programa que lee una cadena de caracteres y calcula su longitud.
+
+inicio:
+                len := 256
+                readStr(str, len)
+                contador := 0
+                dir := 0
+                cero := 0
+                uno := 1
+
+recorrer:
+                var := M[dir + 0]
+                if var = cero then goto fin
+		contador := contador + uno
+                dir := dir + uno
+                goto recorrer
+
+fin:
+                writeInt(contador)
+                halt
+
+equ str M[0]
+equ len M[256]
+equ contador M[257]
+equ dir M[258]
+equ cero M[259]
+equ uno M[260]
+equ var M[261]

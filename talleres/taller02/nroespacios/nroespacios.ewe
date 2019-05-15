@@ -1,0 +1,35 @@
+# Programa que lee una cadena de caracteres y calcula el número de espacios en blanco que tiene.
+
+inicio:
+                len := 256
+		readStr(str, len)
+		espacio := 32
+		contador := 0
+		dir := 0
+		cero := 0
+		uno := 1
+
+recorrer:
+                var := M[dir + 0]
+		if var = espacio then goto contar
+		if var = cero then goto fin
+		dir := dir + uno
+		goto recorrer
+
+contar:
+                contador := contador + uno
+		dir := dir + uno
+		goto recorrer
+
+fin:
+                writeInt(contador)
+                halt
+
+equ str M[0]
+equ len M[256]
+equ espacio M[257]
+equ contador M[258]
+equ dir M[259]
+equ cero M[260]
+equ uno M[261]
+equ var M[262]

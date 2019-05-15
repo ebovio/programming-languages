@@ -1,0 +1,19 @@
+inicio:
+           str  := "Hola mundo"
+	   dir  := 0
+	   cero := 0
+	   uno  := 1
+
+ciclo:
+	   var  := M[dir + 0]
+	   if var = cero then goto fin
+	   writeInt(var)
+	   dir := dir + uno
+	   goto ciclo
+
+fin:       halt
+equ str M[0]
+equ dir M[256]
+equ cero M[257]
+equ uno M[258]
+equ var M[259]

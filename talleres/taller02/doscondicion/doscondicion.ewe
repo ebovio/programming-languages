@@ -1,0 +1,36 @@
+# Programa que lee dos números y verifica si se cumple la consición a >= 10 || b<=20. Si cumple imprime "1" si no imprime "0"
+inicio:
+            diez := 10
+	    veinte := 20
+	    cero := 0
+	    uno := 1
+	    
+            readInt(a)
+            readInt(b)
+	    
+            if a < diez then goto verdcond1
+            if b > veinte then goto verdcond2
+            writeInt(uno)
+            goto fin
+
+verdcond1:
+            writeInt(cero)
+            goto fincond1
+
+fincond1:
+            goto fin
+
+verdcond2:
+            writeInt(cero)
+            goto fincond2
+
+fincond2:
+            goto fin
+
+fin:        halt
+equ a M[0]
+equ b M[1]
+equ diez M[2]
+equ veinte M[3]
+equ cero M[4]
+equ uno M[5]

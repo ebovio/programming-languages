@@ -1,0 +1,12 @@
+inicio:
+           len := 256
+	   readStr(str,len)
+	   writeStr(str)
+
+fin:       halt
+equ str M[0]
+equ len M[256]
+
+#equ len M[0]
+#equ str M[1]
+

@@ -1,0 +1,24 @@
+# Versión criolla de Gauss
+inicio:
+           readInt(n)
+	   i := 1
+	   suma := 0
+	   uno := 1
+
+ciclo:
+           if i > n then goto finciclo
+	   suma := suma + i
+	   i := i + uno
+	   goto ciclo
+
+finciclo:
+           writeInt(suma)
+
+fin:
+           halt
+
+equ n M[0]
+equ i M[1]
+equ suma M[2]
+equ uno M[3]
+
